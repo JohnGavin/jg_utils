@@ -1,6 +1,6 @@
 ## ---- setup_logger_knitr.R
 
-setup_knitr <- function(){  
+setup_knitr <- function(){
 
   suppressPackageStartupMessages(require(knitr))
   knitr::opts_chunk$set(
