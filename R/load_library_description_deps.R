@@ -49,6 +49,7 @@ load_library_description_deps <- function() {
     conflicted::conflict_prefer("map", "purrr") # may clash with targets::map
     conflicted::conflict_prefer("desc", "dplyr")
     conflicted::conflict_prefer("set_names", "rlang")
+    conflicted::conflict_prefer("count", "dplyr")
   })
   
   pkgs
