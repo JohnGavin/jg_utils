@@ -45,6 +45,10 @@ load_library_description_deps <- function() {
     conflicted::conflict_prefer("matches", "tidyselect")
     conflicted::conflict_prefer("fixed", "recipes", "stringr")
     conflicted::conflict_prefer("arrange", "dplyr")
+    conflicted::conflict_prefer("summarise", "dplyr")
+    conflicted::conflict_prefer("map", "purrr") # may clash with targets::map
+    conflicted::conflict_prefer("desc", "dplyr")
+    conflicted::conflict_prefer("set_names", "rlang")
   })
   
   pkgs
