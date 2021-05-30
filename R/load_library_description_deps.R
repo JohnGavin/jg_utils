@@ -44,6 +44,7 @@ load_library_description_deps <- function() {
     conflicted::conflict_prefer("mutate", "dplyr")
     conflicted::conflict_prefer("matches", "tidyselect")
     conflicted::conflict_prefer("fixed", "recipes", "stringr")
+    conflicted::conflict_prefer("arrange", "dplyr")
   })
   
   pkgs
