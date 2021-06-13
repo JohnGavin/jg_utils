@@ -51,26 +51,27 @@ setup_knitr <- function(){
   # set fig.asp = 0.7 in the {knitr} header
   # fig.width = 400/72 and fig.height = 400/72
   # https://www.jumpingrivers.com/blog/knitr-default-options-settings-hooks/
-  dpi_tmp = if (knitr::is_latex_output()) 72 else 300 
-  knitr::opts_chunk$set(
-    dpi = dpi_tmp ,
-    # dpi = c(pdf = 300, else = 72), 
-    fig.width = (6 * dpi_tmp)/dpi_tmp, 
-    out.width = 100 , # 100%
-    fig.asp = 0.7, fig.retina = 2,
-    fig.align = c("center", "left")[1], fig.pos = "t"
-    # , fig.path = "graphics/knitr-" # create a standard directory 
-    )
   
-  # https://www.jumpingrivers.com/blog/r-knitr-markdown-png-pdf-graphics/
-  # dev.args = list(type = "cairo-png") - not actually needed, but you should set it!
-  # dev = c(pdf = "cairo_pdf" , html = = "svg")
-  dev_tmp = if (knitr::is_latex_output())
-    c("png", "svg")[1] else "cairo_pdf"
-  knitr::opts_chunk$set(dev = dev_tmp,
-    # when we set dev = "png", we use the cairo-png variety.
-    dev.args = list(png = list(type = "cairo-png")))
-  
+  # dpi_tmp = if (knitr::is_latex_output()) 72 else 300 
+  # knitr::opts_chunk$set(
+  #   dpi = dpi_tmp ,
+  #   # dpi = c(pdf = 300, else = 72), 
+  #   fig.width = (6 * dpi_tmp)/dpi_tmp, 
+  #   out.width = 100 , # 100%
+  #   fig.asp = 0.7, fig.retina = 2,
+  #   fig.align = c("center", "left")[1], fig.pos = "t"
+  #   # , fig.path = "graphics/knitr-" # create a standard directory 
+  #   )
+  # 
+  # # https://www.jumpingrivers.com/blog/r-knitr-markdown-png-pdf-graphics/
+  # # dev.args = list(type = "cairo-png") - not actually needed, but you should set it!
+  # # dev = c(pdf = "cairo_pdf" , html = = "svg")
+  # dev_tmp = if (knitr::is_latex_output())
+  #   c("png", "svg")[1] else "cairo_pdf"
+  # knitr::opts_chunk$set(dev = dev_tmp,
+  #   # when we set dev = "png", we use the cairo-png variety.
+  #   dev.args = list(png = list(type = "cairo-png")))
+  # 
   # # http://adamleerich.com/assets/reports-appendix/report-code-appendix.Rmd.txt
   # options(tinytex.verbose = TRUE)
   # knitr::opts_chunk$set(
