@@ -74,10 +74,11 @@ setup_knitr <- function(){
   #   dev.args = list(png = list(type = "cairo-png")))
   # 
   # # http://adamleerich.com/assets/reports-appendix/report-code-appendix.Rmd.txt
-  # options(tinytex.verbose = TRUE)
-  knitr::opts_chunk$set(
+  # this next option (tinytex.verbose) shrinks graphs massively?!
+  options(tinytex.verbose = TRUE)
+  # knitr::opts_chunk$set(
   #   purl = FALSE,
-     results=c('markup', 'hide')[2])
+  #   results=c('markup', 'hide')[2])
 }
 
 
