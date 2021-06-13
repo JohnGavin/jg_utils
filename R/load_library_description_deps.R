@@ -37,10 +37,19 @@ load_library_description_deps <- function() {
     conflicted::conflict_prefer("col_factor", "readr", "scales")
     conflicted::conflict_prefer("spec", "readr", "yardstick")
     conflicted::conflict_prefer("discard", "purrr", "scales")
-    conflicted::conflict_prefer("collapse", "dplyr", "glue")
-    conflicted::conflict_prefer("filter", "dplyr", "stats")
-    conflicted::conflict_prefer("lag", "dplyr", "stats")
+    conflicted::conflict_prefer("collapse", "dplyr")
+    conflicted::conflict_prefer("filter", "dplyr")
+    conflicted::conflict_prefer("lag", "dplyr")
+    conflicted::conflict_prefer("rename", "dplyr")
+    conflicted::conflict_prefer("mutate", "dplyr")
+    conflicted::conflict_prefer("matches", "tidyselect")
     conflicted::conflict_prefer("fixed", "recipes", "stringr")
+    conflicted::conflict_prefer("arrange", "dplyr")
+    conflicted::conflict_prefer("summarise", "dplyr")
+    conflicted::conflict_prefer("map", "purrr") # may clash with targets::map
+    conflicted::conflict_prefer("desc", "dplyr")
+    conflicted::conflict_prefer("set_names", "rlang")
+    conflicted::conflict_prefer("count", "dplyr")
   })
   
   pkgs
