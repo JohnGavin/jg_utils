@@ -65,16 +65,17 @@ setup_knitr <- function(){
   # https://www.jumpingrivers.com/blog/r-knitr-markdown-png-pdf-graphics/
   # dev.args = list(type = "cairo-png") - not actually needed, but you should set it!
   # dev = c(pdf = "cairo_pdf" , html = = "svg")
-  dev_tmp = if (knitr::is_latex_output()) c("png", "svg")[1] else "cairo_pdf" 
-  knitr::opts_chunk$set(dev = dev_tmp, 
+  dev_tmp = if (knitr::is_latex_output())
+    c("png", "svg")[1] else "cairo_pdf"
+  knitr::opts_chunk$set(dev = dev_tmp,
     # when we set dev = "png", we use the cairo-png variety.
     dev.args = list(png = list(type = "cairo-png")))
   
-  # http://adamleerich.com/assets/reports-appendix/report-code-appendix.Rmd.txt
-  options(tinytex.verbose = TRUE)
-  knitr::opts_chunk$set(
-    purl = FALSE,
-    results=c('markup', 'hide')[2])
+  # # http://adamleerich.com/assets/reports-appendix/report-code-appendix.Rmd.txt
+  # options(tinytex.verbose = TRUE)
+  # knitr::opts_chunk$set(
+  #   purl = FALSE,
+  #   results=c('markup', 'hide')[2])
 }
 
 
