@@ -75,7 +75,7 @@ setup_knitr <- function(){
   # 
   # # http://adamleerich.com/assets/reports-appendix/report-code-appendix.Rmd.txt
   # this next option (tinytex.verbose) shrinks graphs massively?!
-  options(tinytex.verbose = TRUE)
+  # options(tinytex.verbose = TRUE)
   # knitr::opts_chunk$set(
   #   purl = FALSE,
   #   results=c('markup', 'hide')[2])
