@@ -52,17 +52,17 @@ setup_knitr <- function(){
   # fig.width = 400/72 and fig.height = 400/72
   # https://www.jumpingrivers.com/blog/knitr-default-options-settings-hooks/
   
-  dpi_tmp = if (knitr::is_latex_output()) 72 else 300
-  knitr::opts_chunk$set(
-    dpi = dpi_tmp ,
-    # dpi = c(pdf = 300, else = 72),
-    fig.width = (6 * dpi_tmp)/dpi_tmp,
-    out.width = 100 , # 100%
-    fig.asp = 0.7, fig.retina = 2,
-    fig.align = c("center", "left")[1], 
-    fig.pos = "t"
-    # , fig.path = "graphics/knitr-" # create a standard directory
-    )
+  # dpi_tmp = if (knitr::is_latex_output()) 72 else 300
+  # knitr::opts_chunk$set(
+  #   dpi = dpi_tmp ,
+  #   # dpi = c(pdf = 300, else = 72),
+  #   fig.width = (6 * dpi_tmp)/dpi_tmp,
+  #   out.width = 100 , # 100%
+  #   fig.asp = 0.7, fig.retina = 2,
+  #   fig.align = c("center", "left")[1], 
+  #   fig.pos = "t"
+  #   # , fig.path = "graphics/knitr-" # create a standard directory
+  #   )
 
   # # https://www.jumpingrivers.com/blog/r-knitr-markdown-png-pdf-graphics/
   # # dev.args = list(type = "cairo-png") - not actually needed, but you should set it!
