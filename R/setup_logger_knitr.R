@@ -74,7 +74,7 @@ setup_knitr <- function(){
   #   dev.args = list(png = list(type = "cairo-png")))
   # 
   # # http://adamleerich.com/assets/reports-appendix/report-code-appendix.Rmd.txt
-  options(tinytex.verbose = TRUE)
+  # options(tinytex.verbose = TRUE)
   knitr::opts_chunk$set(
   #   purl = FALSE,
      results=c('markup', 'hide')[2])
