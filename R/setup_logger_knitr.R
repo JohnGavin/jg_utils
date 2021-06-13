@@ -62,7 +62,7 @@ setup_knitr <- function(){
   #   fig.align = c("center", "left")[1], 
   #   fig.pos = "t"
   #   # , fig.path = "graphics/knitr-" # create a standard directory
-  #   )
+  #   ) 
 
   # # https://www.jumpingrivers.com/blog/r-knitr-markdown-png-pdf-graphics/
   # # dev.args = list(type = "cairo-png") - not actually needed, but you should set it!
